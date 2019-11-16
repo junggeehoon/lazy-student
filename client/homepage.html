@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="table.css">
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="submitBtn.css">
-        
+        <link rel="stylesheet" href="headingBorder.css">
         <link rel="stylesheet" href="InputBox.css">
 
         <title>InputPage</title>
@@ -29,78 +29,61 @@
 
         <br>
 
-        <!--Form itself-->
-        <!--
-        <form action="#" method="POST">
-            <h3 style="border-top: 3px solid #00533f;box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.16);padding: 7px;">&emsp;Scores</h3>
-            <p>
-                <table cellspacing="10" align="center" class="changecolor" width="1000">
-                    <tr>
-                        <th>Lecture</th><th>Lab</th>
-                    </tr>
-                    <tr>
-                        <td align="center">
-                            <div id="input_pluralBox">
-                                <div id="input_plural">
-                                    <input type="text" class="form-control" placeholder="Input Scores" name="lecture">
-                                    <input type="button" value="＋" class="add pluralBtn">
-                                    <input type="button" value="－" class="del pluralBtn">
-                                </div>
-                            </div>
-                        </td>
-                        <td align="center">
-                            <div id="input_pluralBox">
-                                <div id="input_plural">
-                                    <input type="text" class="form-control" placeholder="Input Scores" name="lab">
-                                    <input type="button" value="＋" class="add pluralBtn">
-                                    <input type="button" value="－" class="del pluralBtn">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </p>
+        <form action="http://localhost:3000/grade">
+            <div class="demo demo5">
+                <h3><div class="heading"><span>Target Score</span></div></h3>
+            </div>
             <div style="text-align: center">
-                <button type="submit" class="btn-square-slant">Calculate!</button>
+                Your Target Score :
+                <input type="text" name="targetScore" class="inputs">
             </div>
         </form>
-    -->
+
+        <br>
         
-        <form id="main_form" class="box" data-formno="0" action="#" method="POST">
-            <h3 style="border-top: 3px solid #00533f;box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.16);padding: 7px;">&emsp;Scores</h3>
+        <form id="main_form" class="box" data-formno="0" action="http://localhost:3000/grade" method="POST">
+            <div class="demo demo5">
+                <h3><div class="heading"><span>Scores</span></div></h3>
+            </div>
             <div id="id_form0" class="container">
+                <br>
+                <br>
                 <div class="row">
                     <div class="col">
                         Category :
-                        <input type="text" value="Category" name="input[0]" class="name">
+                        <input type="text" name="category" class="inputs">
                     </div>
+                    <div class="col"></div>
                 </div>
                 <div class="row">
                     <div class="col">
                         Current Points :
-                        <input type="text" value="Current Points" name="currentPts">
+                        <input type="text" name="currentPts" class="inputs">
                     </div>
                     <div class="col">
                         Total Points :
-                        <input type="text" value="Total Points" name="totalPts">
+                        <input type="text" name="totalPts" class="inputs">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         Weights :
-                        <input type="text" value="Weights" name="weight">
+                        <input type="text" name="weight" class="inputs">
                     </div>
                     <div class="col">
                         Effort (0-100) :
-                        <input type="text" value="Effort (0-100)" name="effort">
+                        <input type="text" name="effort" class="inputs">
                     </div>
                 </div>
                 <br>
                 <br>
             </div>
+            <p style="text-align: center">
             <a class="deletformbox" type="button">Delete</a>
-            <p><a class="addformbox" type="button">Add</a></p>
+            <a class="addformbox" type="button">Add</a>
+            </p>
         </form>
+
 
         <div style="text-align: center">
             <input type="submit" form="main_form" value="Calculate!" class="btn-square-slant">

@@ -1,18 +1,18 @@
-var countCopies1;
-var clone ;
+// var countCopies1;
+// var clone ;
 
-function duplicate() {
-    var original = document.getElementById('id_form0');
-    clone = original.cloneNode(true); 
-    var countCopies = $('body').html().split('id_form').length;
-    console.log(countCopies)
-    clone.id = "id_form"+countCopies;
-    original.parentNode.appendChild(clone);
-    countCopies1 = countCopies;
-}
+// function duplicate() {
+//     var original = document.getElementById('id_form0');
+//     clone = original.cloneNode(true); 
+//     var countCopies = $('body').html().split('id_form').length;
+//     console.log(countCopies)
+//     clone.id = "id_form"+countCopies;
+//     original.parentNode.appendChild(clone);
+//     countCopies1 = countCopies;
+// }
 
 $(document).on("click", ".add", function() {
-    $(this).parent().duplicate().insertAfter($(this).parent());
+    $(this).parent().clone().insertAfter($(this).parent());
 });
 
 $(document).on("click", ".del", function() {
@@ -21,6 +21,7 @@ $(document).on("click", ".del", function() {
         target.remove();
     }
 });
+
 
 var count = 0;
 

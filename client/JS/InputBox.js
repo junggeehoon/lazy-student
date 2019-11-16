@@ -1,5 +1,5 @@
-var countCopies1;
-var clone ;
+// var countCopies1;
+// var clone ;
 
 // function duplicate() {
 //     var original = document.getElementById('id_form0');
@@ -21,6 +21,7 @@ $(document).on("click", ".del", function() {
         target.remove();
     }
 });
+
 
 var count = 0;
 

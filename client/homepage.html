@@ -66,30 +66,44 @@
         </form>
     -->
         
-        <form id="id_form0" class="box" data-formno="0" action="#" method="POST">
+        <form id="main_form" class="box" data-formno="0" action="#" method="POST">
             <h3 style="border-top: 3px solid #00533f;box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.16);padding: 7px;">&emsp;Scores</h3>
-            <div class="container">
+            <div id="id_form0" class="container">
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="input[0]" class="name">
+                        Category :
+                        <input type="text" value="Category" name="input[0]" class="name">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col" id="input_pluralBox">
-                        <div id="input_plural">
-                            <input type="text" class="form-control" placeholder="Input Scores" name="scores[0]">
-                            <input type="button" value="＋" class="add pluralBtn">
-                            <input type="button" value="－" class="del pluralBtn">
-                        </div>
+                    <div class="col">
+                        Current Points :
+                        <input type="text" value="Current Points" name="currentPts">
+                    </div>
+                    <div class="col">
+                        Total Points :
+                        <input type="text" value="Total Points" name="totalPts">
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col">
+                        Weights :
+                        <input type="text" value="Weights" name="weight">
+                    </div>
+                    <div class="col">
+                        Effort (0-100) :
+                        <input type="text" value="Effort (0-100)" name="effort">
+                    </div>
+                </div>
+                <br>
+                <br>
             </div>
             <a class="deletformbox" type="button">Delete</a>
             <p><a class="addformbox" type="button">Add</a></p>
         </form>
 
         <div style="text-align: center">
-            <input type="submit" form="id_form" value="Calculate!" class="btn-square-slant">
+            <input type="submit" form="main_form" value="Calculate!" class="btn-square-slant">
         </div>
 
         <p id="topbutton">
